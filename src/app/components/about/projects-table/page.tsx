@@ -62,7 +62,7 @@ export default function ProjectsTable({ projects }: { projects: { project: strin
     <section ref={container} className="px-4">
       <div className="grid grid-cols-[0.35fr,0.35fr,0.35fr,0.10fr]">
         <div className="grid col-span-4 grid-cols-subgrid [&_p]:flex">
-          <div className="grid col-span-4 grid-cols-subgrid py-2 text-white text-sm/[27px] uppercase border-b border-neutral-900">
+          <div className="grid col-span-4 grid-cols-subgrid py-2 text-white xl:text-sm/[27px] text-xs/6 uppercase border-b border-neutral-900">
             <p className="">Project</p>
             <p className="">Category</p>
             <p className="">Client</p>
@@ -70,10 +70,10 @@ export default function ProjectsTable({ projects }: { projects: { project: strin
           </div>
           
           {projects.map((row, index) => (
-             <div key={`project-row-${index}`} className="grid col-span-4 grid-cols-subgrid">
+             <div key={`project-row-${index}`} className="grid col-span-4 grid-cols-subgrid [&:not(:last-child)]:border-b">
               <div
                 ref={el => { rowsRef.current[index] = el as HTMLDivElement }}
-                className="relative overflow-hidden grid col-span-4 grid-cols-subgrid py-2 [&:not(:last-child)]:border-b border-neutral-900 text-lg/normal font-semibold cursor-pointer"
+                className="relative overflow-hidden grid col-span-4 grid-cols-subgrid py-2 border-neutral-900 xl:text-lg text-base leading-normal font-semibold cursor-pointer"
                 onClick={() => handleRowClick(index)}
                 onMouseEnter={(event) => handleMouseEnter(event, index)}
                 onMouseLeave={(event) => handleMouseLeave(event, index)}
