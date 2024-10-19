@@ -6,11 +6,11 @@ import { useRef, useState } from "react";
 export default function ProjectsTable({ projects }: { projects: { project: string, category: string, client: string, year: string }[] }) {
   const [expandedRow, setExpandedRow] = useState<number | null>(null);
   const container = useRef(null);
-  const rowWrappersRef = useRef<HTMLDivElement[]>([]);
   const rowsRef = useRef<HTMLDivElement[]>([]);
   const projectRefs = useRef<HTMLParagraphElement[][]>([]);
   const yearRefs = useRef<HTMLParagraphElement[][]>([]);
   const overlayRefs = useRef<HTMLDivElement[][]>([]);
+  const expandableRefs = useRef<HTMLDivElement[]>([]);
 
   const { contextSafe } = useGSAP({ scope: container });
 
@@ -49,12 +49,12 @@ export default function ProjectsTable({ projects }: { projects: { project: strin
   });
   const handleRowClick = contextSafe((index: number) => {
     if (expandedRow !== null && expandedRow !== index) {
-      rowWrappersRef.current[expandedRow].style.gridTemplateRows = '1fr 0fr';
+      expandableRefs.current[expandedRow].style.gridTemplateRows = '0fr';
     }
-    const rowWrapper = rowWrappersRef.current[index];
+    const rowWrapper = expandableRefs.current[index];
     if (rowWrapper) {
-      rowWrapper.style.gridTemplateRows = rowWrapper.style.gridTemplateRows === '1fr 0fr' ? '1fr 1fr' : '1fr 0fr';
-      setExpandedRow(rowWrapper.style.gridTemplateRows === '1fr 1fr' ? index : null);
+      rowWrapper.style.gridTemplateRows = rowWrapper.style.gridTemplateRows === '0fr' ? '1fr' : '0fr';
+      setExpandedRow(rowWrapper.style.gridTemplateRows === '1fr' ? index : null);
     }
   });
 
@@ -70,7 +70,7 @@ export default function ProjectsTable({ projects }: { projects: { project: strin
           </div>
           
           {projects.map((row, index) => (
-             <div key={`project-row-${index}`} ref={el => { rowWrappersRef.current[index] = el as HTMLDivElement }} className="grid col-span-4 grid-cols-subgrid transition-[grid-template-rows] duration-300" style={{gridTemplateRows: '1fr 0fr'}}>
+             <div key={`project-row-${index}`} className="grid col-span-4 grid-cols-subgrid">
               <div
                 ref={el => { rowsRef.current[index] = el as HTMLDivElement }}
                 className="relative overflow-hidden grid col-span-4 grid-cols-subgrid py-2 [&:not(:last-child)]:border-b border-neutral-900 text-lg/normal font-semibold cursor-pointer"
@@ -85,7 +85,9 @@ export default function ProjectsTable({ projects }: { projects: { project: strin
                 <div ref={el => { overlayRefs.current[index] = [el!] }} className="absolute w-full h-full bg-neutral-900 -translate-y-full top-0 left-0 right-0 pointer-events-none"></div>
               </div>
 
-              <div className="overflow-hidden">test</div>
+              <div ref={el => { expandableRefs.current[index] = el as HTMLDivElement }} style={{gridTemplateRows: '0fr'}} className="grid transition-[grid-template-rows] duration-300" >
+                <div className="overflow-hidden">test</div>
+              </div>
            </div>
           ))}
         </div>
