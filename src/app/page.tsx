@@ -1,10 +1,7 @@
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
-import Footer from "./components/footer";
-import Header from "./components/header";
-import me1 from "/public/images/about/me-1.jpeg";
 import ProjectsTable from "./components/about/projects-table/page";
+import me1 from "/public/images/about/me-1.jpeg";
 
 export default function AboutPage() {
   const projects = [
@@ -18,10 +15,8 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="bg-neon-green min-h-screen">
-      <Header currentPage="about" />
-
-      <main className="pt-32 pb-96">
+    <main className="bg-neon-green">
+      <div className="pt-32 pb-96">
         <section className="mb-40 relative h-screen flex items-center justify-center">
           <figure className="flex flex-col items-center gap-8">
             <figcaption className="z-[1] ">
@@ -35,12 +30,8 @@ export default function AboutPage() {
           </figure>
         </section>
 
-        {/* <Glass3d /> */}
-
         <ProjectsTable projects={projects} />
-      </main>
-
-      <Footer />
-    </div>
+      </div>
+    </main>
   );
 }

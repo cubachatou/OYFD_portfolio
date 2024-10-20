@@ -1,6 +1,6 @@
 'use client'
 
-import Effect from "@/app/components/blog/matrix-rain/effect";
+import Effect from "@/app/components/demos/matrix-rain/effect";
 import { useEffect, useRef } from "react";
 
 export default function MatrixRain() {

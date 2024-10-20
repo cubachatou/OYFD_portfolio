@@ -60,7 +60,7 @@ export default function ProjectsTable({ projects }: { projects: { project: strin
 
   return (
     <section ref={container} className="px-4">
-      <div className="grid grid-cols-[0.35fr,0.35fr,0.35fr,0.10fr]">
+      <div className="grid grid-cols-[0.45fr,auto,auto,7rem]">
         <div className="grid col-span-4 grid-cols-subgrid [&_p]:flex">
           <div className="grid col-span-4 grid-cols-subgrid py-2 text-white xl:text-sm/[27px] text-xs/6 uppercase border-b border-neutral-900">
             <p className="">Project</p>
@@ -73,7 +73,7 @@ export default function ProjectsTable({ projects }: { projects: { project: strin
              <div key={`project-row-${index}`} className="grid col-span-4 grid-cols-subgrid [&:not(:last-child)]:border-b">
               <div
                 ref={el => { rowsRef.current[index] = el as HTMLDivElement }}
-                className="relative overflow-hidden grid col-span-4 grid-cols-subgrid py-2 border-neutral-900 xl:text-lg text-base leading-normal font-semibold cursor-pointer"
+                className="overflow-hidden relative grid col-span-4 grid-cols-subgrid py-2 border-neutral-900 xl:text-lg text-base leading-normal font-semibold cursor-pointer"
                 onClick={() => handleRowClick(index)}
                 onMouseEnter={(event) => handleMouseEnter(event, index)}
                 onMouseLeave={(event) => handleMouseLeave(event, index)}
@@ -82,7 +82,7 @@ export default function ProjectsTable({ projects }: { projects: { project: strin
                 <p className="z-1">{row.category}</p>
                 <p className="z-1">{row.client}</p>
                 <p ref={el => { yearRefs.current[index] = [el!] }} className="z-1 justify-end">{row.year}</p>
-                <div ref={el => { overlayRefs.current[index] = [el!] }} className="absolute w-full h-full bg-neutral-900 -translate-y-full top-0 left-0 right-0 pointer-events-none"></div>
+                <div ref={el => { overlayRefs.current[index] = [el!] }} className="absolute w-full h-full bg-neutral-900 -translate-y-[101%] top-0 left-0 right-0 pointer-events-none"></div>
               </div>
 
               <div ref={el => { expandableRefs.current[index] = el as HTMLDivElement }} style={{gridTemplateRows: '0fr'}} className="grid transition-[grid-template-rows] duration-300" >

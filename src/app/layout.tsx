@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Dancing_Script } from "next/font/google";
+import { Dancing_Script, Inter } from "next/font/google";
 import "the-new-css-reset/css/reset.css";
+import Footer from "./components/footer";
+import Header from "./components/header";
 import "./globals.css";
 
 export const inter = Inter({ subsets: ["latin"], display: "swap", variable: '--font-inter'});
@@ -18,8 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${dancingScript.variable} ${inter.variable}`}>
-      <body className='bg-neutral-100 font-inter'>
-        {children}
+      <body className='font-inter'>
+        <Header />
+
+          {children}
+
+        <Footer />
       </body>
     </html>
   );

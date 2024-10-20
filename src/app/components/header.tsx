@@ -1,37 +1,37 @@
+'use client';
+
 import Link from "next/link";
-import Image from "next/image";
-import logo from "/public/logo.svg";
+import { usePathname } from "next/navigation";
 
-const aboutLinks = [
-  { href: "/blog", label: "Blog" },
+const links = [
   { href: "mailto:alexeyyakuba@gmail.com", label: "Contact", target: "_blank", rel: "noopener" },
   { href: "https://www.linkedin.com/in/oleksiiyakuba/", label: "Linkedin", target: "_blank", rel: "noopener" },
 ];
-const blogLinks = [
+
+const firstLinks = [
+  { href: "/demos", label: "Demos" },
   { href: "/", label: "About" },
-  { href: "mailto:alexeyyakuba@gmail.com", label: "Contact", target: "_blank", rel: "noopener" },
-  { href: "https://www.linkedin.com/in/oleksiiyakuba/", label: "Linkedin", target: "_blank", rel: "noopener" },
 ];
 
-export default function Header({ classes, currentPage }: { classes?: string, currentPage?: string }) {
+export default function Header() {
+  const pathname = usePathname();
 
   return (
-    <header className={`z-10 flex items-start justify-between px-8 py-4 ${classes}`}>
-      { currentPage === 'about' && <span className="uppercase text-sm">Oleksii Yakuba</span> }
-      { currentPage === 'blog' && <Image className="aspect-[76/20.65]" src={logo} alt="logo" width={108} height={29.35} quality={100} /> }
+    <header className={`z-10 flex items-start justify-between px-8 py-4 ${pathname === '/' ? 'bg-neon-green' : 'bg-neutral-100'}`}>
+      <span className="uppercase text-sm">Oleksii Yakuba</span>
 
       <nav>
         <ul className='flex items-center gap-6'>
-          {currentPage === 'about' && aboutLinks.map(({ href, label, target, rel }) => (
-            <li key={`${href}${label}`}>
-              <Link href={href} target
-              ={target} rel={rel}>{label}</Link>
-            </li>
+          {firstLinks.map(({ href, label }) => (
+            (pathname === '/' && href === '/demos') || (pathname === '/demos' && href === '/') ? (
+              <li key={`${href}${label}`}>
+                <Link href={href}>{label}</Link>
+              </li>
+            ) : null
           ))}
-          {currentPage === 'blog' && blogLinks.map(({ href, label, target, rel }) => (
+          {links.map(({ href, label, target, rel }) => (
             <li key={`${href}${label}`}>
-              <Link href={href} target
-              ={target} rel={rel}>{label}</Link>
+              <Link href={href} target={target} rel={rel}>{label}</Link>
             </li>
           ))}
         </ul>

@@ -2,7 +2,7 @@
 import { useScroll } from "framer-motion";
 import dynamic from "next/dynamic";
 import React, { useRef } from 'react';
-const Scene = dynamic(() => import('@/app/components/blog/3d-wave-on-scroll/Scene'), {
+const Scene = dynamic(() => import('@/app/components/demos/3d-wave-on-scroll/Scene'), {
   ssr: false,
 })
 
