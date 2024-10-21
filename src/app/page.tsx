@@ -1,6 +1,7 @@
 
 import Image from "next/image";
 import ProjectsTable from "./components/about/projects-table/page";
+import CurveSVG from "./components/CurveSVG";
 import me1 from "/public/images/about/me-1.jpeg";
 
 export default function AboutPage() {
@@ -32,6 +33,7 @@ export default function AboutPage() {
 
         <ProjectsTable projects={projects} />
       </div>
+      <CurveSVG />
     </main>
   );
 }

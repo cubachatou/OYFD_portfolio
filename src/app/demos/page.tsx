@@ -4,6 +4,7 @@ import { getDemos } from "@/app/lib/data";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import CurveSVG from "../components/CurveSVG";
 
 type Demo = {
   date: string;
@@ -80,6 +81,7 @@ export default function DemosPage() {
           </ul>
         </section>
       </div>
+      <CurveSVG />
     </main>
   );
 }
