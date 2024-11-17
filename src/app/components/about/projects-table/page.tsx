@@ -90,10 +90,10 @@ export default function ProjectsTable({ projects }: { projects: portfolioData[] 
               <div ref={el => { expandableRefs.current[index] = el as HTMLDivElement }} style={{gridTemplateRows: '0fr'}} className="col-span-4 grid transition-[grid-template-rows] duration-700" >
                 <div className="overflow-hidden">
                   <div className="flex flex-col items-start gap-24 min-h-fit pt-8 pb-16">
-                  <div className="max-w-3xl flex flex-col items-start gap-6">
+                  <div className="max-w-5xl flex flex-col items-start gap-6">
                     <p className="text-4xl font-medium leading-snug text-balance">{ row.description }</p>
 
-                    <a href={ row.link } target="_blank" rel="noopener noreferrer nofollow" className="inline-flex px-4 py-2 rounded-full bg-white shadow-lg">See website</a>
+                    {row.link && <a href={ row.link } target="_blank" rel="noopener noreferrer nofollow" className="inline-flex px-4 py-2 rounded-full bg-white shadow-lg">See website</a>}
 
                     <ul className="flex flex-col gap-2 text-lg [&_li]:relative [&_li]:flex [&_li]:items-baseline [&_li]:gap-2 [&_li]:before:relative [&_li]:before:size-2 [&_li]:before:bg-black [&_li]:before:rounded-full">
                       {row.features.map((feature, index) => (
@@ -102,11 +102,11 @@ export default function ProjectsTable({ projects }: { projects: portfolioData[] 
                     </ul>
                   </div>
 
-                  <div className="w-full grid grid-cols-3 gap-4">
+                  <div className="w-full grid grid-cols-3 gap-2">
                     {row.images.map((image) => (
-                      <>
-                        <Image key={`folio-img-${index}`} src={image} alt="" sizes="100vw" className="w-full h-auto object-cover object-top aspect-video" />
-                      </>
+                      <div key={`folio-img-${index}`} className="shadow-lg">
+                        <Image src={image} alt="" sizes="100vw" className="w-full h-auto object-cover object-top aspect-video" />
+                      </div>
                     ))}
                   </div>
                   </div>
