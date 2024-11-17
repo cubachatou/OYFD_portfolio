@@ -81,6 +81,7 @@ export default function DemosPage() {
           </ul>
         </section>
       </div>
+      
       <CurveSVG />
     </main>
   );

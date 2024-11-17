@@ -87,7 +87,7 @@ const SVG = ({width, height}: {width: number, height: number}) => {
   }
 
   return (
-    <motion.svg {...anim(translate)} className="w-screen h-[calc(100vh+600px)] -top-[300px] left-0 fixed z-50">
+    <motion.svg {...anim(translate)} className="w-screen h-[calc(100vh+600px)] -top-[300px] left-0 fixed z-50 fill-black">
       <motion.path {...anim(curve(initialPath, targetPath))} />
     </motion.svg>
   )

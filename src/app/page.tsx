@@ -1,20 +1,11 @@
 
+import { portfolioData } from "@/app/data/portfolio";
 import Image from "next/image";
 import ProjectsTable from "./components/about/projects-table/page";
 import CurveSVG from "./components/CurveSVG";
 import me1 from "/public/images/about/me-1.jpeg";
 
 export default function AboutPage() {
-  const projects = [
-    { project: 'WMS Webshop', category: 'Development', client: 'xs Informatik GmbH', year: '2024' },
-    { project: 'Mavericks', category: 'Development', client: 'Mavericks Agency', year: '2024' },
-    { project: 'Kyiv Educational Hub', category: 'Maintenance', client: 'Kyiv Educational Hub', year: '2021-2024' },
-    { project: 'OLX Kazakhstan electronics promo', category: 'Maintenance', client: 'OLX Kazakhstan', year: '2021-2024' },
-    { project: 'OLX B2B', category: 'Maintenance', client: 'OLX B2B', year: '2021-2024' },
-    { project: 'Zelena', category: 'Maintenance', client: 'ZELENA', year: '2021-2024' },
-    { project: 'Theprintspace', category: 'Maintenance', client: 'Theprintspace', year: '2021-2024' },
-  ];
-
   return (
     <main className="bg-neon-green">
       <div className="pt-32 pb-96">
@@ -31,8 +22,9 @@ export default function AboutPage() {
           </figure>
         </section>
 
-        <ProjectsTable projects={projects} />
+        <ProjectsTable projects={portfolioData} />
       </div>
+      
       <CurveSVG />
     </main>
   );
