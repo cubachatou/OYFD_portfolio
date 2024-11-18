@@ -14,6 +14,9 @@ import OLX_KZ_3 from "/public/images/about/portfolio/OLX-KZ/OLX_KZ_3.png";
 import eduhub_1 from "/public/images/about/portfolio/eduhub/eduhub_1.png";
 import eduhub_2 from "/public/images/about/portfolio/eduhub/eduhub_2.png";
 import eduhub_3 from "/public/images/about/portfolio/eduhub/eduhub_3.png";
+import LignvaPL_1 from "/public/images/about/portfolio/LingvaPL/LingvaPL_1.png";
+import LignvaPL_2 from "/public/images/about/portfolio/LingvaPL/LingvaPL_2.png";
+import LignvaPL_3 from "/public/images/about/portfolio/LingvaPL/LingvaPL_3.png";
 
 export interface portfolioData {
   project: string;
@@ -29,13 +32,13 @@ export interface portfolioData {
 export const portfolioData: portfolioData[] = [
   {
     project: "LingvaPL",
-    category: "Development | Maintenance",
+    category: "Development",
     client: "Lingva",
     year: "2023-2024",
     description:
       "As part of Mavericks Agency, I developed the Lingva Polska platform, offering over 10,000 exercises for learning Polish through gamified dialogues voiced by native speakers. The project, backed by Deloitte Poland Foundation, supports Ukrainian refugees with an intuitive, user-friendly experience.",
     features: ["GSAP", "Vue.js", "Laravel", "LottieFiles"],
-    images: [OLX_KZ_1, OLX_KZ_2, OLX_KZ_3],
+    images: [LignvaPL_1, LignvaPL_2, LignvaPL_3],
   },
   {
     project: "Kyiv Educational Hub",

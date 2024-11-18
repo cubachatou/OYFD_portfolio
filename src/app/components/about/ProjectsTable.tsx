@@ -104,7 +104,7 @@ export default function ProjectsTable({
           <div className="grid lg:col-span-4 col-span-2 grid-cols-subgrid [&:not(:last-child)]:border-b border-white">
             <div className="overflow-hidden relative grid lg:col-span-4 col-span-2 grid-cols-subgrid py-2 border-white xl:text-lg text-base text-neutral-500 leading-normal">
               <p className="z-1">WMS Webshop</p>
-              <p className="z-1 max-lg:!hidden">Frontend Development</p>
+              <p className="z-1 max-lg:!hidden">Development</p>
               <p className="z-1 max-lg:!hidden">xs Informatik GmbH</p>
               <p className="z-1 lg:justify-end">current</p>
               <div className="absolute w-full h-full bg-white -translate-y-[101%] top-0 left-0 right-0 pointer-events-none"></div>
