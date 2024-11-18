@@ -6,12 +6,12 @@ import Header from "./components/header";
 import "./globals.css";
 import Providers from "./providers";
 
-export const inter = Inter({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
 });
-export const dancingScript = Dancing_Script({
+const dancingScript = Dancing_Script({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-dancing",
