@@ -73,8 +73,24 @@ export default function ProjectsTable({
     }
   });
 
+  const objectPosition = (index: number) => {
+    switch (projects[index].project) {
+      case "Kyiv Educational Hub":
+        return "center";
+
+      case "OLX KZ electronics promo":
+        return "center";
+
+      case "Theprintspace":
+        return "center";
+
+      default:
+        return "top";
+    }
+  };
+
   return (
-    <section ref={container} className="px-4">
+    <section ref={container} className="lg:mt-24 md:mt-16 px-4">
       <div className="grid lg:grid-cols-[0.45fr,auto,auto,7rem] grid-cols-[1fr,0.5fr]">
         <div className="grid lg:col-span-4 col-span-2 grid-cols-subgrid [&_p]:flex">
           <div className="grid lg:col-span-4 col-span-2 grid-cols-subgrid py-2 text-neutral-300 xl:text-xs/7 text-xs/6 uppercase border-b border-white">
@@ -82,6 +98,17 @@ export default function ProjectsTable({
             <p className="max-lg:!hidden">Category</p>
             <p className="max-lg:!hidden">Client</p>
             <p className="lg:justify-end">Year</p>
+          </div>
+
+          {/* IN PROGRESS */}
+          <div className="grid lg:col-span-4 col-span-2 grid-cols-subgrid [&:not(:last-child)]:border-b border-white">
+            <div className="overflow-hidden relative grid lg:col-span-4 col-span-2 grid-cols-subgrid py-2 border-white xl:text-lg text-base text-neutral-500 leading-normal">
+              <p className="z-1">WMS Webshop</p>
+              <p className="z-1 max-lg:!hidden">Frontend Development</p>
+              <p className="z-1 max-lg:!hidden">xs Informatik GmbH</p>
+              <p className="z-1 lg:justify-end">current</p>
+              <div className="absolute w-full h-full bg-white -translate-y-[101%] top-0 left-0 right-0 pointer-events-none"></div>
+            </div>
           </div>
 
           {projects.map((row, index) => (
@@ -163,7 +190,8 @@ export default function ProjectsTable({
                             src={image}
                             alt=""
                             sizes="100vw"
-                            className="w-full h-auto object-cover object-top aspect-video max-xl:max-w-screen-lg max-md:max-w-lg"
+                            className="w-full h-auto object-cover aspect-video max-xl:max-w-screen-lg max-md:max-w-lg"
+                            style={{ objectPosition: objectPosition(index) }}
                           />
                         </div>
                       ))}

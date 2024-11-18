@@ -25,21 +25,10 @@ export interface portfolioData {
   features: string[];
   images: StaticImageData[];
 }
-
-// const projects = [
-//   { project: 'WMS Webshop', category: 'Development', client: 'xs Informatik GmbH', year: '2024' },
-//   { project: 'Mavericks', category: 'Development', client: 'Mavericks Agency', year: '2024' },
-//   { project: 'Kyiv Educational Hub', category: 'Maintenance', client: 'Kyiv Educational Hub', year: '2021-2024' },
-//   { project: 'OLX Kazakhstan electronics promo', category: 'Maintenance', client: 'OLX Kazakhstan', year: '2021-2024' },
-//   { project: 'OLX B2B', category: 'Maintenance', client: 'OLX B2B', year: '2021-2024' },
-//   { project: 'Zelena', category: 'Maintenance', client: 'ZELENA', year: '2021-2024' },
-//   { project: 'Theprintspace', category: 'Maintenance', client: 'Theprintspace', year: '2021-2024' },
-// ];
-
 export const portfolioData: portfolioData[] = [
   {
     project: "Kyiv Educational Hub",
-    category: "Maintenance",
+    category: "Frontend Development",
     client: "Kyiv Educational Hub",
     year: "2021-2024",
     description:
@@ -50,7 +39,7 @@ export const portfolioData: portfolioData[] = [
   },
   {
     project: "OLX KZ electronics promo",
-    category: "Maintenance",
+    category: "Frontend Development",
     client: "OLX Kazakhstan",
     year: "2021-2024",
     description:
@@ -60,7 +49,7 @@ export const portfolioData: portfolioData[] = [
   },
   {
     project: "OLX B2B",
-    category: "Maintenance",
+    category: "Frontend Development",
     client: "OLX B2B",
     year: "2021-2024",
     description:
@@ -71,7 +60,7 @@ export const portfolioData: portfolioData[] = [
   },
   {
     project: "Zelena",
-    category: "Maintenance",
+    category: "Frontend Development",
     client: "ZELENA",
     year: "2021-2024",
     description:
@@ -90,7 +79,7 @@ export const portfolioData: portfolioData[] = [
   },
   {
     project: "Theprintspace",
-    category: "Maintenance",
+    category: "Frontend Development",
     client: "Theprintspace",
     year: "2021-2024",
     description:
