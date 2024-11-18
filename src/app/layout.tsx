@@ -6,8 +6,16 @@ import Header from "./components/header";
 import "./globals.css";
 import Providers from "./providers";
 
-export const inter = Inter({ subsets: ["latin"], display: "swap", variable: '--font-inter'});
-export const dancingScript = Dancing_Script({ subsets: ["latin"], display: "swap", variable: '--font-dancing'});
+export const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+export const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-dancing",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${dancingScript.variable} ${inter.variable}`}>
-      <body className='font-inter'>
+      <body className="font-inter">
         <Header />
 
         <Providers>{children}</Providers>

@@ -1,15 +1,11 @@
 "use client";
-import { portfolioData } from "@/app/data/portfolio";
+import { FolioWork } from "@/app/lib/data";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
 import { useRef, useState } from "react";
 
-export default function ProjectsTable({
-  projects,
-}: {
-  projects: portfolioData[];
-}) {
+export default function ProjectsTable({ projects }: { projects: FolioWork[] }) {
   const [expandedRow, setExpandedRow] = useState<number | null>(null);
   const container = useRef(null);
   const rowsRef = useRef<HTMLDivElement[]>([]);
@@ -184,8 +180,11 @@ export default function ProjectsTable({
                     </div>
 
                     <div className="w-full grid xl:grid-cols-3 gap-2 max-xl:justify-center">
-                      {row.images.map((image) => (
-                        <div key={`folio-img-${index}`} className="shadow-lg">
+                      {row.images.map((image, i) => (
+                        <div
+                          key={`${row.project}-img-${i}`}
+                          className="shadow-lg"
+                        >
                           <Image
                             src={image}
                             alt=""

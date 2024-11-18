@@ -1,20 +1,11 @@
 "use client";
 
-import { getDemos } from "@/app/lib/data";
+import { Demo, getDemos } from "@/app/lib/data";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import CurveSVG from "../components/CurveSVG";
 import SmoothScrolling from "../components/SmoothScrolling";
-
-type Demo = {
-  date: string;
-  tags: string[];
-  title: string;
-  description: string;
-  path: string;
-  img: StaticImageData;
-};
 
 const tags = ["Recent", "3D", "Mouse", "Scroll"];
 

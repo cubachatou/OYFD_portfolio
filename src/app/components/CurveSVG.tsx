@@ -76,7 +76,7 @@ const SVG = ({ width, height }: { width: number; height: number }) => {
       },
       animate: {
         d: stage === "leaving" ? initialPath : targetPath,
-        transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] },
+        transition: { duration: 1, ease: [0.76, 0, 0.24, 1] },
       },
     };
   };
@@ -86,7 +86,7 @@ const SVG = ({ width, height }: { width: number; height: number }) => {
     },
     animate: {
       top: stage == "leaving" ? "-300px" : "-100vh",
-      transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: 1, ease: [0.76, 0, 0.24, 1] },
       transitionEnd: {
         top: stage == "leaving" ? "-300px" : "100vh",
       },

@@ -8,7 +8,7 @@ import { useRef } from "react";
 import me1 from "/public/images/about/me-1.jpeg";
 gsap.registerPlugin(ScrollTrigger);
 
-import { portfolioData } from "@/app/data/portfolio";
+import { FolioWork } from "./lib/data";
 import ProjectsTable from "./components/about/ProjectsTable";
 import CurveSVG from "./components/CurveSVG";
 import SmoothScrolling from "./components/SmoothScrolling";
@@ -81,7 +81,7 @@ export default function AboutPage() {
             </figure>
           </section>
 
-          <ProjectsTable projects={portfolioData} />
+          <ProjectsTable projects={FolioWork} />
         </div>
 
         <CurveSVG />
