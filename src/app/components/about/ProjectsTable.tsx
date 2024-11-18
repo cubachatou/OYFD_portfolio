@@ -91,7 +91,7 @@ export default function ProjectsTable({
 
   return (
     <section ref={container} className="lg:mt-24 md:mt-16 px-4">
-      <div className="grid lg:grid-cols-[0.45fr,auto,auto,7rem] grid-cols-[1fr,0.5fr]">
+      <div className="grid lg:grid-cols-[0.45fr,auto,auto,8rem] grid-cols-[1fr,0.5fr]">
         <div className="grid lg:col-span-4 col-span-2 grid-cols-subgrid [&_p]:flex">
           <div className="grid lg:col-span-4 col-span-2 grid-cols-subgrid py-2 text-neutral-300 xl:text-xs/7 text-xs/6 uppercase border-b border-white">
             <p className="">Project</p>
