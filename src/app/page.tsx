@@ -9,7 +9,7 @@ import me1 from "/public/images/about/me-1.jpeg";
 gsap.registerPlugin(ScrollTrigger);
 
 import { FolioWork } from "./lib/data";
-import ProjectsTable from "./components/about/ProjectsTable";
+import ProjectsTable from "./components/ProjectsTable";
 import CurveSVG from "./components/CurveSVG";
 import SmoothScrolling from "./components/SmoothScrolling";
 

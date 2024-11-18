@@ -1,4 +1,4 @@
-import Symbol from './symbol';
+import Symbol from "./symbol";
 
 export default class Effect {
   private canvasWidth: number;
@@ -19,7 +19,12 @@ export default class Effect {
   private init() {
     for (let i = 0; i < this.columns; i++) {
       // const randomY = Math.floor(Math.random() * this.canvasHeight / this.fontSize);
-      this.symbols[i] = new Symbol(i, this.canvasHeight, this.fontSize, this.canvasHeight);
+      this.symbols[i] = new Symbol(
+        i,
+        this.canvasHeight,
+        this.fontSize,
+        this.canvasHeight,
+      );
     }
   }
 

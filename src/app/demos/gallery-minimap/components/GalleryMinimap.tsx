@@ -1,6 +1,5 @@
 "use client";
 
-import SmoothScrolling from "@/app/components/SmoothScrolling";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
@@ -20,13 +19,7 @@ const images = [
   "https://images.unsplash.com/photo-1708212826795-543f9d01edf6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 
-// export const metadata: Metadata = {
-//   title: "Demo: Gallery Minimap",
-//   description:
-//     "Discover an interactive gallery experience featuring a minimap for seamless navigation. Built with Next.js, GSAP, and Lenis for smooth scrolling, this component showcases vertically arranged images. The minimap stays pinned during scrolling and updates its preview based on the current image in view. Clickable minimap thumbnails allow direct navigation, while GSAP’s ScrollToPlugin and ScrollTrigger create a fluid, engaging scroll experience for large image galleries.",
-// };
-
-export default function GalleryMinimapPage() {
+export default function GalleryMinimap() {
   useGSAP(() => {
     const imagesContainer = document.querySelector(
       "[data-images-wrapper]",
@@ -68,54 +61,50 @@ export default function GalleryMinimapPage() {
   };
 
   return (
-    <SmoothScrolling>
-      <main className="bg-black">
-        <div className="relative w-full flex z-0">
-          <div
-            data-minimap
-            className="absolute !z-5 top-[50vh] -translate-y-[calc(125px/2)] w-1/4 h-screen bg-black transition-colors duration-500"
-          >
+    <div className="relative w-full flex z-0">
+      <div
+        data-minimap
+        className="absolute !z-5 top-[50vh] -translate-y-[calc(125px/2)] w-1/4 h-screen bg-black transition-colors duration-500"
+      >
+        <div
+          data-preview
+          className="left-1/2 w-full flex flex-col items-center"
+        >
+          {images.map((src, index) => (
             <div
-              data-preview
-              className="left-1/2 w-full flex flex-col items-center"
+              key={index}
+              className="relative w-[100px] h-[125px] p-2.5 overflow-hidden"
             >
-              {images.map((src, index) => (
-                <div
-                  key={index}
-                  className="relative w-[100px] h-[125px] p-2.5 overflow-hidden"
-                >
-                  <Image
-                    className="cursor-pointer"
-                    onClick={() => handleClick(index)}
-                    src={src}
-                    alt=""
-                    width={100}
-                    height={125}
-                  />
-                </div>
-              ))}
-            </div>
-
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100px] h-[125px] border border-white rounded mix-blend-difference"></div>
-          </div>
-
-          <div
-            data-images-wrapper
-            className="relative -z-[1] w-full flex flex-col items-center gap-[10vh] my-[5vh]"
-          >
-            {images.map((src, index) => (
               <Image
-                key={index}
-                className="relative h-[90vh] w-[calc(90vh/1.5)] object-cover"
+                className="cursor-pointer"
+                onClick={() => handleClick(index)}
                 src={src}
                 alt=""
-                width={564}
-                height={846}
+                width={100}
+                height={125}
               />
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </main>
-    </SmoothScrolling>
+
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100px] h-[125px] border border-white rounded mix-blend-difference"></div>
+      </div>
+
+      <div
+        data-images-wrapper
+        className="relative -z-[1] w-full flex flex-col items-center gap-[10vh] my-[5vh]"
+      >
+        {images.map((src, index) => (
+          <Image
+            key={index}
+            className="relative h-[90vh] w-[calc(90vh/1.5)] object-cover"
+            src={src}
+            alt=""
+            width={564}
+            height={846}
+          />
+        ))}
+      </div>
+    </div>
   );
 }

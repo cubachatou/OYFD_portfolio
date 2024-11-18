@@ -26,6 +26,10 @@ const firstLinks = [
 export default function Header() {
   const pathname = usePathname();
 
+  if (pathname.startsWith("/demos/") && pathname.split("/").length > 2) {
+    return null;
+  }
+
   return (
     <header
       className={`z-10 flex items-baseline justify-between sm:px-8 px-4 py-4 ${
@@ -42,7 +46,7 @@ export default function Header() {
               <li key={`${href}${label}`}>
                 <Link href={href}>{label}</Link>
               </li>
-            ) : null
+            ) : null,
           )}
           {links.map(({ href, label, target, rel }) => (
             <li key={`${href}${label}`}>
