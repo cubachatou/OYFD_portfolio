@@ -29,7 +29,7 @@ export default function DemosSection() {
           <span>Step into</span> my demo world!
           <br />
           <p className="text-balance">
-            I'm <span>Oleksii</span>, and here I recreate various creative{" "}
+            I'm <span>Oleksii</span>, and here I recreate various creative
             <span>escapades</span>.
           </p>
         </h1>
@@ -90,6 +90,7 @@ export default function DemosSection() {
                 <h3 className="text-xl/tight font-bold">
                   <Link
                     href={demo.path}
+                    target="_blank"
                     className="hover:text-purple-dark transition-colors"
                   >
                     {demo.title}
