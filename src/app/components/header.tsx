@@ -39,7 +39,7 @@ export default function Header() {
       <span className="uppercase sm:text-sm text-xs">Oleksii Yakuba</span>
 
       <nav>
-        <ul className="flex items-center sm:gap-6 gap-3 max-sm:text-xs">
+        <ul className="flex items-center sm:gap-6 gap-3">
           {firstLinks.map(({ href, label }) =>
             (pathname === "/" && href === "/demos") ||
             (pathname === "/demos" && href === "/") ? (
