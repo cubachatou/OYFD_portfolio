@@ -11,7 +11,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.0",
     "@react-three/drei": "^9.105.4",
-    "@react-three/fiber": "^8.16.2",
+    "@react-three/fiber": "^9.0.0-alpha.8",
     "@studio-freight/react-lenis": "^0.0.47",
     "@types/three": "^0.163.0",
     "eslint-plugin-prettier": "^5.2.1",
@@ -20,8 +20,8 @@
     "leva": "^0.9.35",
     "next": "^15.0.3",
     "next-transition-router": "^0.2.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0-rc.1",
+    "react-dom": "^19.0.0-rc.1",
     "sharp": "^0.33.3",
     "the-new-css-reset": "^1.11.2",
     "three": "^0.163.0"

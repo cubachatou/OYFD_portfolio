@@ -1,3 +1,4 @@
+import SmoothScrolling from "@/app/components/SmoothScrolling";
 import { Metadata } from "next";
 import StackedCards from "./components/StackedCards";
 
@@ -9,10 +10,12 @@ export const metadata: Metadata = {
 
 export default function StackedCardsPage() {
   return (
-    <main className="bg-amber-300">
-      <div className="h-[15vh]"></div>
+    <SmoothScrolling>
+      <main className="bg-amber-300">
+        <div className="h-[15vh]"></div>
 
-      <StackedCards />
-    </main>
+        <StackedCards />
+      </main>
+    </SmoothScrolling>
   );
 }
