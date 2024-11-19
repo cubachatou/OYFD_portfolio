@@ -21,7 +21,6 @@ export const metadata: Metadata = {
   title: "Oleksii Yakuba - Frontend Developer",
   description:
     "Experienced frontend developer specializing in React, Next.js, Vue, and Angular. I have a passion for creating dynamic and interactive user experiences with animations using GSAP, Framer Motion, and more. Proficient in TypeScript, Tailwind CSS, and SCSS. In my free time, I enjoy recreating creative coding solutions and exploring innovative design patterns.",
-  robots: "noindex",
 };
 
 export default function RootLayout({
