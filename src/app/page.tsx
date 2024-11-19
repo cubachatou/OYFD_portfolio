@@ -8,10 +8,10 @@ import { useRef } from "react";
 import me1 from "/public/images/about/me-1.jpeg";
 gsap.registerPlugin(ScrollTrigger);
 
-import { FolioWork } from "./lib/data";
-import ProjectsTable from "./components/ProjectsTable";
 import CurveSVG from "./components/CurveSVG";
+import ProjectsTable from "./components/ProjectsTable";
 import SmoothScrolling from "./components/SmoothScrolling";
+import { FolioWork } from "./lib/data";
 
 export default function AboutPage() {
   const main = useRef(null);
@@ -19,6 +19,14 @@ export default function AboutPage() {
   const position = useRef(null);
 
   useGSAP(() => {
+    ScrollTrigger.create({
+      trigger: section.current,
+      start: "center center",
+      end: "+=50%",
+      scrub: true,
+      pin: true,
+    });
+
     gsap.to(main.current, {
       scrollTrigger: {
         trigger: section.current,
@@ -34,14 +42,13 @@ export default function AboutPage() {
         trigger: section.current,
         start: "center center",
         end: "+=50%",
-        scrub: true,
-        pin: true,
+        toggleActions: "play none play reverse",
       },
-      // opacity: 0.1,
-      scale: 0.3,
-      marginTop: "0rem",
-      height: "4vw",
-      color: "#CADB4E",
+      height: 0,
+      scale: 0,
+      opacity: 0,
+      duration: 0.7,
+      marginTop: 0,
       ease: "power1.inOut",
     });
   });
@@ -57,13 +64,13 @@ export default function AboutPage() {
             <figure className="flex flex-col items-center">
               <figcaption className="z-[1]">
                 <h1 className="flex flex-col text-center">
-                  <span className="xl:text-[86px] lg:text-[72px] sm:text-[58px] text-5xl leading-none font-bold text-white font-dancing">
+                  <span className="min-[1660px]:text-8xl xl:text-7xl lg:text-6xl sm:text-5xl text-4xl leading-none font-bold text-white font-dancing">
                     Oleksii Yakuba
                   </span>
 
                   <span
                     ref={position}
-                    className="mt-2 mb-8 xl:text-[72px] lg:text-[58px] sm:text-[44px] text-4xl leading-tight font-medium text-neutral-900"
+                    className="mt-2 lg:mb-8 mb-4 min-[1660px]:text-7xl xl:text-6xl lg:text-5xl sm:text-4xl text-3xl leading-tight font-medium text-neutral-900"
                   >
                     Frontend Developer
                     <br />
