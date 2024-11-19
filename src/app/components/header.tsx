@@ -32,14 +32,14 @@ export default function Header() {
 
   return (
     <header
-      className={`z-10 flex items-baseline justify-between sm:px-8 px-4 py-4 ${
+      className={`z-10 flex items-baseline sm:justify-between justify-center sm:px-8 px-4 py-4 ${
         pathname === "/" ? "bg-neon-green" : "bg-neutral-100"
       }`}
     >
-      <span className="uppercase sm:text-sm text-xs">Oleksii Yakuba</span>
+      <span className="uppercase text-sm max-sm:hidden">Oleksii Yakuba</span>
 
       <nav>
-        <ul className="flex items-center sm:gap-6 gap-3">
+        <ul className="flex items-center gap-6">
           {firstLinks.map(({ href, label }) =>
             (pathname === "/" && href === "/demos") ||
             (pathname === "/demos" && href === "/") ? (
