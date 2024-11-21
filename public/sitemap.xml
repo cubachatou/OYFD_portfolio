@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main page -->
+  <url>
+    <loc>https://www.oleksiiyakuba.com</loc>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Demos overview page -->
+  <url>
+    <loc>https://www.oleksiiyakuba.com/demos</loc>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Dynamic demo pages -->
+  <url>
+    <loc>https://www.oleksiiyakuba.com/demos/3d-wave-on-scroll</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.oleksiiyakuba.com/demos/matrix-rain</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.oleksiiyakuba.com/demos/cards-stacked</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.oleksiiyakuba.com/demos/glowy-spotlight</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.oleksiiyakuba.com/demos/gallery-minimap</loc>
+    <priority>0.7</priority>
+  </url>
+</urlset>
