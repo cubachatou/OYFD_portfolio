@@ -19,37 +19,25 @@ export default function AboutPage() {
   const position = useRef(null);
 
   useGSAP(() => {
-    ScrollTrigger.create({
-      trigger: section.current,
-      start: "center center",
-      end: "+=50%",
-      scrub: true,
-      pin: true,
-    });
-
-    gsap.to(main.current, {
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section.current,
         start: "center center",
-        end: "+=50%",
+        end: "+=100%",
         scrub: true,
+        pin: true,
       },
-      backgroundColor: "#171717",
     });
 
-    gsap.to(position.current, {
-      scrollTrigger: {
-        trigger: section.current,
-        start: "center center",
-        end: "+=50%",
-        toggleActions: "play none play reverse",
-      },
+    tl.to(position.current, {
       height: 0,
       scale: 0,
       opacity: 0,
       duration: 0.7,
       marginTop: 0,
       ease: "power1.inOut",
+    }).to(main.current, {
+      backgroundColor: "#171717",
     });
   });
 
