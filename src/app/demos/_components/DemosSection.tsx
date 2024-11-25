@@ -25,12 +25,12 @@ export default function DemosSection() {
   return (
     <section className="grow flex flex-col lg:gap-16 gap-8">
       <div className="flex flex-col gap-8">
-        <h1 className="max-w-[1008px] xl:text-[50px] lg:text-4xl md:text-3xl text-2xl leading-tight font-medium [&_span]:font-bold [&_span]:xl:text-[72px] [&_span]:lg:text-6xl [&_span]:md:text-5xl [&_span]:text-4xl leading-/none [&_span]:font-dancing">
+        <h1 className="max-w-[1008px] xl:text-[50px] lg:text-4xl md:text-3xl text-2xl !leading-normal font-medium [&_span]:font-bold [&_span]:xl:text-[72px]/[50px] [&_span]:lg:text-6xl/[2.25rem] [&_span]:md:text-5xl/[1.875rem] [&_span]:text-4xl/[1.5rem] [&_span]:font-dancing">
           <span>Step into</span> my demo world!
           <br />
           <p className="text-balance">
             I'm <span>Oleksii</span>, and here I recreate various creative
-            <span>escapades</span>.
+            <span> escapades</span>.
           </p>
         </h1>
 
