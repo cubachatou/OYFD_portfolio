@@ -14,7 +14,7 @@ export default function ResumePage() {
     <SmoothScrolling>
       <main className="bg-neon-green">
         <div className="container flex justify-center">
-          <div className="mt-[20vh] mb-[40vh] flex flex-col gap-16 text-7xl/normal">
+          <div className="mt-[20vh] mb-[40vh] flex flex-col md:gap-16 sm:gap-12 gap-8 xl:text-7xl/normal lg:text-6xl/tight sm:text-5xl/tight text-2xl/tight">
             {/* <Link
               download
               href="../../public/logo.svg"
@@ -38,14 +38,14 @@ export default function ResumePage() {
               value="Since 2020, I’ve worked with a wide range of tools and technologies to deliver visually stunning, user-friendly websites."
             />
 
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col sm:gap-8 gap-4">
               <Paragraph
                 offset={["start 0.7", "end 0.7"]}
                 value="My expertise includes:"
                 className="underline"
               />
 
-              <ul className="flex flex-col gap-8 text-5xl/normal">
+              <ul className="flex flex-col sm:gap-8 gap-4 lg:text-5xl/tight sm:text-4xl/tight text-1xl/tight">
                 <li>
                   <Paragraph
                     offset={["start 0.7", "end 0.7"]}
