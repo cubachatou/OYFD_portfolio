@@ -9,8 +9,11 @@
     content: "";
     position: absolute;
     inset: 0;
-    background:
-      radial-gradient(circle at var(--x) var(--y), hsl(0 0% 100% / 0.5), transparent 15vmin),
+    background: radial-gradient(
+        circle at var(--x) var(--y),
+        hsl(0 0% 100% / 0.5),
+        transparent 15vmin
+      ),
       transparent;
     background-attachment: fixed;
     pointer-events: none;
@@ -20,12 +23,15 @@
       linear-gradient(white, white) 0 50% / 4px 100% no-repeat,
       linear-gradient(white, white) 100% 50% / 4px 100% no-repeat;
   }
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     inset: 0;
-    background:
-      radial-gradient(circle at var(--x) var(--y), hsl(0 0% 100% / 0.15), transparent 15vmin);
+    background: radial-gradient(
+      circle at var(--x) var(--y),
+      hsl(0 0% 100% / 0.15),
+      transparent 15vmin
+    );
     background-attachment: fixed;
     opacity: var(--active, 0);
     transition: opacity 0.2s;

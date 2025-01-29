@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { useRef } from "react";
-import me1 from "/public/images/about/me-1.jpeg";
+import me1 from "/public/images/folio/me-1.jpeg";
 gsap.registerPlugin(ScrollTrigger);
 
 import CurveSVG from "./components/CurveSVG";
@@ -13,7 +13,7 @@ import ProjectsTable from "./components/ProjectsTable";
 import SmoothScrolling from "./components/SmoothScrolling";
 import { FolioWork } from "./lib/data";
 
-export default function AboutPage() {
+export default function FolioPage() {
   const main = useRef(null);
   const section = useRef(null);
   const position = useRef(null);

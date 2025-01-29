@@ -19,30 +19,28 @@ const links = [
 ];
 
 const firstLinks = [
-  { href: "/demos", label: "Demos" },
-  { href: "/", label: "About" },
+  { href: "/about", label: "About" },
+  { href: "/", label: "Portfolio" },
 ];
 
 export default function Header() {
   const pathname = usePathname();
 
-  if (pathname.startsWith("/demos/") && pathname.split("/").length > 2) {
+  if (pathname.startsWith("/about/") && pathname.split("/").length > 2) {
     return null;
   }
 
   return (
     <header
-      className={`z-10 flex items-baseline sm:justify-between justify-center sm:px-8 px-4 py-4 ${
-        pathname === "/" ? "bg-neon-green" : "bg-neutral-100"
-      }`}
+      className={`z-10 flex items-baseline sm:justify-between justify-center sm:px-8 px-4 py-4 bg-neon-green`}
     >
       <span className="uppercase text-sm max-sm:hidden">Oleksii Yakuba</span>
 
       <nav>
         <ul className="flex items-center gap-6">
           {firstLinks.map(({ href, label }) =>
-            (pathname === "/" && href === "/demos") ||
-            (pathname === "/demos" && href === "/") ? (
+            (pathname === "/" && href === "/about") ||
+            (pathname === "/about" && href === "/") ? (
               <li key={`${href}${label}`}>
                 <Link href={href}>{label}</Link>
               </li>
