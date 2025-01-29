@@ -14,7 +14,7 @@ export default function ResumePage() {
     <SmoothScrolling>
       <main className="bg-neon-green">
         <div className="container flex justify-center">
-          <div className="mt-[4em] mb-[30vh] flex flex-col gap-[2em] xl:text-7xl/normal lg:text-6xl/tight sm:text-5xl/tight text-2xl/tight">
+          <div className="mt-[4em] mb-[30dvh] flex flex-col gap-[2em] xl:text-7xl/normal lg:text-6xl/tight sm:text-5xl/tight text-2xl/tight">
             <a
               download
               href="./Oleksii Yakuba - CV.pdf"
