@@ -14,11 +14,11 @@ export default function ResumePage() {
     <SmoothScrolling>
       <main className="bg-neon-green">
         <div className="container flex justify-center">
-          <div className="mt-[4em] mb-[30dvh] flex flex-col gap-[2em] xl:text-7xl/normal lg:text-6xl/tight sm:text-5xl/tight text-2xl/tight">
+          <div className="mt-[3em] mb-[30dvh] flex flex-col gap-[2em] xl:text-7xl/normal lg:text-6xl/tight sm:text-5xl/tight text-2xl/tight">
             <a
               download
               href="./Oleksii Yakuba - CV.pdf"
-              className="inline-flex mx-auto mb-[1.5em] px-[0.5em] py-[0.25em] rounded-full bg-black shadow-lg text-white lg:text-5xl/none sm:text-4xl/none text-2xl/none hover:text-black hover:bg-white transition-colors duration-300"
+              className="inline-flex mx-auto mb-[1em] px-[0.5em] py-[0.25em] rounded-full bg-black shadow-lg text-white lg:text-5xl/none sm:text-4xl/none text-2xl/none hover:text-black hover:bg-white transition-colors duration-300"
             >
               Download CV
             </a>
