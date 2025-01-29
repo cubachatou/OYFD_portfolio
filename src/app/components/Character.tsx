@@ -50,7 +50,7 @@ const Word = ({ children, range, progress, className }: WordProps) => {
   const amount = range[1] - range[0];
   const step = amount / children.length;
   return (
-    <span className={`mr-3 ${className}`}>
+    <span className={`mr-[0.35em] ${className}`}>
       {characters.map((char: string, i: number) => {
         const start = range[0] + step * i;
         const end = range[0] + step * (i + 1);

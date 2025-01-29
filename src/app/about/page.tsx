@@ -14,14 +14,14 @@ export default function ResumePage() {
     <SmoothScrolling>
       <main className="bg-neon-green">
         <div className="container flex justify-center">
-          <div className="mt-[20vh] mb-[40vh] flex flex-col md:gap-16 sm:gap-12 gap-8 xl:text-7xl/normal lg:text-6xl/tight sm:text-5xl/tight text-2xl/tight">
-            {/* <Link
+          <div className="mt-[4em] mb-[30vh] flex flex-col md:gap-16 sm:gap-12 gap-8 xl:text-7xl/normal lg:text-6xl/tight sm:text-5xl/tight text-2xl/tight">
+            <a
               download
-              href="../../public/logo.svg"
-              className="inline-flex mx-auto px-[0.5em] py-[0.25em] rounded-full bg-white shadow-lg text-black text-5xl/none hover:text-white hover:bg-black transition-colors duration-300"
+              href="./Oleksii Yakuba - CV.pdf"
+              className="inline-flex mx-auto mb-[1.5em] px-[0.5em] py-[0.25em] rounded-full bg-black shadow-lg text-white lg:text-5xl/none sm:text-4xl/none text-2xl/none hover:text-black hover:bg-white transition-colors duration-300"
             >
               Download CV
-            </Link> */}
+            </a>
 
             <Paragraph
               offset={["start 0.7", "end 0.7"]}
