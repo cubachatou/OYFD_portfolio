@@ -34,7 +34,7 @@ export default function ProjectsTable({ projects }: { projects: FolioWork[] }) {
           .to(project, { paddingLeft: "1rem" }, 0)
           .to(year, { paddingRight: "1rem" }, 0);
       }
-    }
+    },
   );
   const handleMouseLeave = contextSafe(
     (event: React.MouseEvent, index: number) => {
@@ -53,7 +53,7 @@ export default function ProjectsTable({ projects }: { projects: FolioWork[] }) {
           .to(project, { paddingLeft: 0 }, 0)
           .to(year, { paddingRight: 0 }, 0);
       }
-    }
+    },
   );
   const handleRowClick = contextSafe((index: number) => {
     if (expandedRow !== null && expandedRow !== index) {
@@ -64,7 +64,7 @@ export default function ProjectsTable({ projects }: { projects: FolioWork[] }) {
       rowWrapper.style.gridTemplateRows =
         rowWrapper.style.gridTemplateRows === "0fr" ? "1fr" : "0fr";
       setExpandedRow(
-        rowWrapper.style.gridTemplateRows === "1fr" ? index : null
+        rowWrapper.style.gridTemplateRows === "1fr" ? index : null,
       );
     }
   });
@@ -99,8 +99,18 @@ export default function ProjectsTable({ projects }: { projects: FolioWork[] }) {
           {/* IN PROGRESS */}
           <div className="grid lg:col-span-4 col-span-2 grid-cols-subgrid [&:not(:last-child)]:border-b border-white">
             <div className="overflow-hidden relative grid lg:col-span-4 col-span-2 grid-cols-subgrid py-2 border-white xl:text-lg text-base text-neutral-500 leading-normal">
+              <p className="z-1">XS Webportal</p>
+              <p className="z-1 max-lg:!hidden">Development (Angular)</p>
+              <p className="z-1 max-lg:!hidden">xs Informatik GmbH</p>
+              <p className="z-1 lg:justify-end">current</p>
+              <div className="absolute w-full h-full bg-white -translate-y-[101%] top-0 left-0 right-0 pointer-events-none"></div>
+            </div>
+          </div>
+
+          <div className="grid lg:col-span-4 col-span-2 grid-cols-subgrid [&:not(:last-child)]:border-b border-white">
+            <div className="overflow-hidden relative grid lg:col-span-4 col-span-2 grid-cols-subgrid py-2 border-white xl:text-lg text-base text-neutral-500 leading-normal">
               <p className="z-1">WMS Webshop</p>
-              <p className="z-1 max-lg:!hidden">Development</p>
+              <p className="z-1 max-lg:!hidden">Development (Angular)</p>
               <p className="z-1 max-lg:!hidden">xs Informatik GmbH</p>
               <p className="z-1 lg:justify-end">current</p>
               <div className="absolute w-full h-full bg-white -translate-y-[101%] top-0 left-0 right-0 pointer-events-none"></div>
