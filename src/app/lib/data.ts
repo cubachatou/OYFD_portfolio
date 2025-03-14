@@ -20,6 +20,9 @@ import OLX_KZ_3 from "/public/images/folio/works/OLX-KZ/OLX_KZ_3.png";
 import PrintspaceImage_1 from "/public/images/folio/works/PRINTSPACE/printspace_1.png";
 import PrintspaceImage_2 from "/public/images/folio/works/PRINTSPACE/printspace_2.png";
 import PrintspaceImage_5 from "/public/images/folio/works/PRINTSPACE/printspace_3.png";
+import XSPortal_1 from "/public/images/folio/works/XSPortal/xsportal_1.png";
+import XSPortal_2 from "/public/images/folio/works/XSPortal/xsportal_2.png";
+import XSPortal_3 from "/public/images/folio/works/XSPortal/xsportal_3.png";
 import ZelenaImage_1 from "/public/images/folio/works/ZELENA/zelena_1.png";
 import ZelenaImage_2 from "/public/images/folio/works/ZELENA/zelena_2.png";
 import ZelenaImage_3 from "/public/images/folio/works/ZELENA/zelena_3.png";
@@ -104,6 +107,17 @@ export interface FolioWork {
 }
 
 export const FolioWork: FolioWork[] = [
+  {
+    project: "XS Portal",
+    category: "Development",
+    client: "xs Informatik GmbH",
+    year: "2024-2025",
+    description:
+      "As a freelancer, I developed a web portal for XS Informatik, integrating it with their proprietary backend API. Built with Angular, Tailwind, and Ant Design, the platform delivers a modern and flexible UI/UX. It supports multiple languages and features individual client profiles. The core functionality focuses on efficiently displaying large datasets in tables, optimized for seamless interaction and usability.",
+    link: "http://xsportal.xsdispo.com",
+    features: ["Angular", "Tailwind", "Ant Design", "XS Dispo API"],
+    images: [XSPortal_1, XSPortal_2, XSPortal_3],
+  },
   {
     project: "LingvaPL",
     category: "Development",
